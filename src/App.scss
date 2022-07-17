@@ -6,13 +6,16 @@
     margin: 0;
 }
 
+body {
+    min-height: 100vh;
+    text-align: center;
+    color: $mainBrightColor;
+    background-color: $pageBgColor;
+}
+
 .App {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    color: $mainBrightColor;
-    background-color: $pageBgColor;
 }

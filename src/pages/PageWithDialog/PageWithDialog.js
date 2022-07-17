@@ -17,12 +17,13 @@ export const PageWithDialog = (props) => {
   const openDialogWindow = () => {
     setIsDialogOpen(() => true)
   }
-  const confirmDialogWindow = () => {
+
+  const handleConfirmDialogWindow = () => {
     setIsDialogOpen(() => false)
     console.log('Kliknięto w przycisk \'OK\'')
   }
 
-  const abortDialogWindow = () => {
+  const handleAbortDialogWindow = () => {
     setIsDialogOpen(() => false)
     console.log('Kliknięto w przycisk \'Anuluj\'')
   }
@@ -31,7 +32,7 @@ export const PageWithDialog = (props) => {
     <>
       <h2>Task 1 - Okno dialogowe</h2>
       <div
-        className={'root'}
+        className={'task-1'}
         {...otherProps}
       >
         <Button
@@ -40,8 +41,8 @@ export const PageWithDialog = (props) => {
         />
         <Dialog
           isDialogOpen={isDialogOpen}
-          confirmDialogWindow={confirmDialogWindow}
-          abortDialogWindow={abortDialogWindow}
+          handleConfirmDialogWindow={handleConfirmDialogWindow}
+          handleAbortDialogWindow={handleAbortDialogWindow}
           dialogTitle={'Nazwa okna'}
           dialogInfo={'Informacja: Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
         >

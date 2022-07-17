@@ -9,8 +9,8 @@ export const Dialog = (props) => {
   const {
     className,
     isDialogOpen,
-    confirmDialogWindow,
-    abortDialogWindow,
+    handleConfirmDialogWindow,
+    handleAbortDialogWindow,
     dialogTitle,
     dialogInfo,
     ...otherProps
@@ -18,20 +18,20 @@ export const Dialog = (props) => {
 
   return (
     <dialog
-      className={'root-dialog'}
+      className={'task-1-dialog'}
       open={isDialogOpen}
       {...otherProps}
     >
-      <h2 className={'root-dialog__title'}>{dialogTitle}</h2>
-      <p className={'root-dialog__info'}>{dialogInfo}</p>
+      <h2 className={'task-1-dialog__title'}>{dialogTitle}</h2>
+      <p className={'task-1-dialog__info'}>{dialogInfo}</p>
       <Button
-        className={'root-dialog__confirm-btn'}
-        onClick={confirmDialogWindow}
+        className={'task-1-dialog__confirm-btn'}
+        onClick={handleConfirmDialogWindow}
         label={'OK'}
       />
       <Button
-        className={'root-dialog__abort-btn'}
-        onClick={abortDialogWindow}
+        className={'task-1-dialog__abort-btn'}
+        onClick={handleAbortDialogWindow}
         label={'Anuluj'}
       />
     </dialog>
@@ -41,8 +41,8 @@ export const Dialog = (props) => {
 Dialog.propTypes = {
   className: PropTypes.string,
   isDialogOpen: PropTypes.bool.isRequired,
-  confirmDialogWindow: PropTypes.func.isRequired,
-  abortDialogWindow: PropTypes.func.isRequired,
+  handleConfirmDialogWindow: PropTypes.func.isRequired,
+  handleAbortDialogWindow: PropTypes.func.isRequired,
   dialogTitle: PropTypes.string.isRequired,
   dialogInfo: PropTypes.string.isRequired
 }

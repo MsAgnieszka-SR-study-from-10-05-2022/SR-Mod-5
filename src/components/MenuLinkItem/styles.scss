@@ -1,0 +1,19 @@
+@import '../../universal-styles/colors';
+
+.menu-link-item {
+  margin: 2px;
+  padding: 3px 6px;
+  min-width: 60px;
+  color: $mainDarkColor;
+  text-decoration: none;
+  border-bottom: 2px solid $mainDarkColor;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: color .5s, border-bottom .5s, background .5s;
+
+  &:hover {
+    color: $mainBrightColor;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.42180199716605393) 25%, rgba(19,21,26,1) 100%);;
+  }
+}
