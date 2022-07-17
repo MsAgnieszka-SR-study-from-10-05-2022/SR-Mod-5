@@ -1,0 +1,34 @@
+@import '../../universal-styles/colors';
+
+.task-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-2-snackbar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  width: 300px;
+  background-color: $wrapperBgColor;
+  border: 3px solid $borderColor;
+  border-radius: 5px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    margin: 10px;
+    color: $mainBrightColor;
+  }
+
+  &__close-btn {
+    background-color: $hoverColor;
+  }
+}

@@ -25,7 +25,7 @@
             "",
             "  return (",
             "    <div",
-            "      className={`root${className ? ` ${className}` : ''}`}",
+            "      className={`root-{{pascal name}}${className ? ` ${className}` : ''}`}",
             "      {...otherProps}",
             "    >",
             "",
@@ -52,7 +52,7 @@
         {
           "name": "styles.scss",
           "content": [
-            ".root {}",
+            ".root-{{pascal name}} {}",
             ""
           ]
         }

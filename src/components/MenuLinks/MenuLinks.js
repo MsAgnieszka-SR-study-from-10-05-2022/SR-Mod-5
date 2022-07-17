@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import 'components/MenuLinks/styles.scss'
 
-export const MenuLink = (props) => {
+export const MenuLinks = (props) => {
   const {
     className,
     children,
@@ -22,9 +22,9 @@ export const MenuLink = (props) => {
   )
 }
 
-MenuLink.propTypes = {
+MenuLinks.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node
 }
 
-export default MenuLink
+export default MenuLinks

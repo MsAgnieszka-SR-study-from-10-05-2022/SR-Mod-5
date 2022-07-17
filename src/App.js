@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import MenuLinks from 'components/MenuLinks'
 import MenuLinkItem from 'components/MenuLinkItem'
 import PageWithDialog from 'pages/PageWithDialog'
+import PageWithSnackbar from 'pages/PageWithSnackbar'
 
 import './App.scss'
 
@@ -51,12 +52,14 @@ const App = () => {
             <PageWithDialog />
           }
         />
-        {/* <Route
-            path={'/task-2'}
-            element={
-              <... />
+        <Route
+          path={'/task-2'}
+          element={
+            <PageWithSnackbar
+              snackbarTimeoutFromProps={2000}
+            />
           }
-          /> */}
+        />
         {/* <Route
             path={'/task-3'}
             element={

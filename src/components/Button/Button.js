@@ -13,7 +13,7 @@ export const Button = (props) => {
   return (
     <button
       type={'button'}
-      className={`dialog-button${className ? ` ${className}` : ''}`}
+      className={`basic-button${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
       {label}
