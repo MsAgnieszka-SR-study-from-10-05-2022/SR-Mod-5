@@ -1,0 +1,29 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import 'components/Button/styles.scss'
+
+export const Button = (props) => {
+  const {
+    className,
+    label,
+    ...otherProps
+  } = props
+
+  return (
+    <button
+      type={'button'}
+      className={`dialog-button${className ? ` ${className}` : ''}`}
+      {...otherProps}
+    >
+      {label}
+    </button>
+  )
+}
+
+Button.propTypes = {
+  className: PropTypes.string,
+  label: PropTypes.string
+}
+
+export default Button

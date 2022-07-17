@@ -1,0 +1,28 @@
+@import '../../universal-styles/colors';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.root-dialog {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  max-width: 300px;
+  background-color: $wrapperBgColor;
+  border-radius: 5px;
+
+  &__title,
+  &__info {
+    margin:10px 0;
+    color: $mainBrightColor;
+  }
+
+  &__close-btn {
+    background-color: $hoverColor;
+  }
+}
