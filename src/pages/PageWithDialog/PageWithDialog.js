@@ -5,7 +5,6 @@ import Button from 'components/Button'
 import { Dialog } from 'pages/PageWithDialog'
 
 import 'pages/PageWithDialog/styles.scss'
-// import colors from 'universal-styles/colors'
 
 export const PageWithDialog = (props) => {
   const {
@@ -18,28 +17,38 @@ export const PageWithDialog = (props) => {
   const openDialogWindow = () => {
     setIsDialogOpen(() => true)
   }
-  const closeDialogWindow = () => {
+  const confirmDialogWindow = () => {
     setIsDialogOpen(() => false)
+    console.log('Kliknięto w przycisk \'OK\'')
+  }
+
+  const abortDialogWindow = () => {
+    setIsDialogOpen(() => false)
+    console.log('Kliknięto w przycisk \'Anuluj\'')
   }
 
   return (
-    <div
-      className={'root'}
-      {...otherProps}
-    >
-      <Button
-        onClick={openDialogWindow}
-        label={'Otwórz okno Dialog'}
-      />
-      <Dialog
-        isDialogOpen={isDialogOpen}
-        closeDialogWindow={closeDialogWindow}
-        dialogTitle={'Nazwa okna'}
-        dialogInfo={'Informacja: Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+    <>
+      <h2>Task 1 - Okno dialogowe</h2>
+      <div
+        className={'root'}
+        {...otherProps}
       >
-        {children}
-      </Dialog>
-    </div>
+        <Button
+          onClick={openDialogWindow}
+          label={'Otwórz okno Dialog'}
+        />
+        <Dialog
+          isDialogOpen={isDialogOpen}
+          confirmDialogWindow={confirmDialogWindow}
+          abortDialogWindow={abortDialogWindow}
+          dialogTitle={'Nazwa okna'}
+          dialogInfo={'Informacja: Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+        >
+          {children}
+        </Dialog>
+      </div>
+    </>
   )
 }
 

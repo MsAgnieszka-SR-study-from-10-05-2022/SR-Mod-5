@@ -9,7 +9,8 @@ export const Dialog = (props) => {
   const {
     className,
     isDialogOpen,
-    closeDialogWindow,
+    confirmDialogWindow,
+    abortDialogWindow,
     dialogTitle,
     dialogInfo,
     ...otherProps
@@ -24,9 +25,14 @@ export const Dialog = (props) => {
       <h2 className={'root-dialog__title'}>{dialogTitle}</h2>
       <p className={'root-dialog__info'}>{dialogInfo}</p>
       <Button
-        className={'root-dialog__close-btn'}
-        onClick={closeDialogWindow}
-        label={'Zamknij okno'}
+        className={'root-dialog__confirm-btn'}
+        onClick={confirmDialogWindow}
+        label={'OK'}
+      />
+      <Button
+        className={'root-dialog__abort-btn'}
+        onClick={abortDialogWindow}
+        label={'Anuluj'}
       />
     </dialog>
   )
@@ -35,7 +41,8 @@ export const Dialog = (props) => {
 Dialog.propTypes = {
   className: PropTypes.string,
   isDialogOpen: PropTypes.bool.isRequired,
-  closeDialogWindow: PropTypes.func.isRequired,
+  confirmDialogWindow: PropTypes.func.isRequired,
+  abortDialogWindow: PropTypes.func.isRequired,
   dialogTitle: PropTypes.string.isRequired,
   dialogInfo: PropTypes.string.isRequired
 }
