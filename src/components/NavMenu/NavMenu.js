@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import 'components/MenuLinks/styles.scss'
+import 'components/NavMenu/styles.scss'
 
-export const MenuLinks = (props) => {
+export const NavMenu = (props) => {
   const {
     className,
     children,
@@ -22,9 +22,9 @@ export const MenuLinks = (props) => {
   )
 }
 
-MenuLinks.propTypes = {
+NavMenu.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node
 }
 
-export default MenuLinks
+export default NavMenu

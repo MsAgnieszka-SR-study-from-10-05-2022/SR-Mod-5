@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import { NavLink } from 'react-router-dom'
 
-import 'components/MenuLinkItem/styles.scss'
+import 'components/NavMenuLink/styles.scss'
 
-export const MenuLinkItem = (props) => {
+export const NavMenuLink = (props) => {
   const {
     className,
     pathTo,
@@ -26,10 +26,10 @@ export const MenuLinkItem = (props) => {
   )
 }
 
-MenuLinkItem.propTypes = {
+NavMenuLink.propTypes = {
   className: PropTypes.string,
   pathTo: PropTypes.string.isRequired,
   navLinkLabel: PropTypes.string.isRequired
 }
 
-export default MenuLinkItem
+export default NavMenuLink

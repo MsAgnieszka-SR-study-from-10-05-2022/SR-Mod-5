@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Routes, Route } from 'react-router-dom'
 
-import MenuLinks from 'components/MenuLinks'
-import MenuLinkItem from 'components/MenuLinkItem'
+import NavMenu from 'components/NavMenu'
+import NavMenuLink from 'components/NavMenuLink'
 import PageWithDialog from 'pages/PageWithDialog'
 import PageWithSnackbar from 'pages/PageWithSnackbar'
 
@@ -14,28 +14,28 @@ const App = () => {
     <>
       <div className={'App'}>
         <h1>Zadania - moduł 5</h1>
-        <MenuLinks>
-          <MenuLinkItem
+        <NavMenu>
+          <NavMenuLink
             pathTo={'/task-1'}
             navLinkLabel={'Task 1'}
           />
-          <MenuLinkItem
+          <NavMenuLink
             pathTo={'/task-2'}
             navLinkLabel={'Task 2'}
           />
-          <MenuLinkItem
+          <NavMenuLink
             pathTo={'/task-3'}
             navLinkLabel={'Task 3'}
           />
-          <MenuLinkItem
+          <NavMenuLink
             pathTo={'/task-4'}
             navLinkLabel={'Task 4'}
           />
-          <MenuLinkItem
+          <NavMenuLink
             pathTo={'/task-5'}
             navLinkLabel={'Task 5'}
           />
-        </MenuLinks>
+        </NavMenu>
       </div>
       <Routes>
         <Route
