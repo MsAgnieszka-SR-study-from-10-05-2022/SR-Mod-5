@@ -16,7 +16,7 @@ export const Snackbar = (props) => {
 
   return (
     <dialog
-      className={'task-2-snackbar'}
+      className={`task-2-snackbar${className ? ` task-2-snackbar--${className}` : ''}`}
       open={isSnackbarOpen}
       {...otherProps}
     >
@@ -35,7 +35,7 @@ export const Snackbar = (props) => {
 }
 
 Snackbar.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.oneOf(['top-left', 'bottom-center', 'center']),
   snackbarInfo: PropTypes.string,
   handleCloseSnackbar: PropTypes.func.isRequired,
   isSnackbarOpen: PropTypes.bool.isRequired

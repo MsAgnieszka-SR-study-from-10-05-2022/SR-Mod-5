@@ -17,23 +17,22 @@ export const PageWithSnackbar = (props) => {
 
   const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false)
 
-  const handleCloseSnackbarAfterTimeout = React.useCallback(() => {
-    setTimeout(() => {
-      setIsSnackbarOpen(() => false)
-    }, snackbarTimeout)
-  }, [snackbarTimeout])
-
-  const handleCloseSnackbar = () => {
-    setIsSnackbarOpen(() => false)
-    console.log('Zamknięto snackbar przyciskiem')
-  }
-
-  const handleOpenSnackbarWindow = React.useCallback(() => {
+  const handleOpenSnackbar = React.useCallback(() => {
     setIsSnackbarOpen(() => true)
   }, [])
 
+  const handleCloseSnackbar = React.useCallback(() => {
+    setIsSnackbarOpen(() => false)
+  }, [])
+
+  const handleCloseSnackbarAfterTimeout = React.useCallback(() => {
+    setTimeout(() => {
+      handleCloseSnackbar()
+    }, snackbarTimeout)
+  }, [handleCloseSnackbar, snackbarTimeout])
+
   React.useEffect(() => {
-    if (isSnackbarOpen === true) {
+    if (isSnackbarOpen) {
       handleCloseSnackbarAfterTimeout()
     }
   }, [handleCloseSnackbarAfterTimeout, isSnackbarOpen])
@@ -46,13 +45,16 @@ export const PageWithSnackbar = (props) => {
         {...otherProps}
       >
         <Button
-          onClick={handleOpenSnackbarWindow}
+          onClick={handleOpenSnackbar}
           label={'Otwórz Snackbar'}
         />
         <Snackbar
           handleCloseSnackbar={handleCloseSnackbar}
           snackbarInfo={'To jest szary Snackbar'}
           isSnackbarOpen={isSnackbarOpen}
+          // If you want to change Snackbar position pick one of proposal and add it as a className props
+          // You can choose: 'top-left' or 'bottom-center' or 'center-of-site'
+          className={''}
         >
           {children}
         </Snackbar>
