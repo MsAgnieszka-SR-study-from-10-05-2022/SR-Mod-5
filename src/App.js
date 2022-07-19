@@ -3,47 +3,35 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import NavMenu from 'components/NavMenu'
-import NavMenuLink from 'components/NavMenuLink'
+// import ButtonNavMenu from 'components/ButtonNavMenu'
 import PageWithDialog from 'pages/PageWithDialog'
 import PageWithSnackbar from 'pages/PageWithSnackbar'
+import PageWithNavMenu from 'pages/PageWithNavMenu'
 
 import './App.scss'
+import styled from 'styled-components'
+
+const NavBarContainer = styled.div``
 
 const App = () => {
   return (
     <>
-      <div className={'App'}>
-        <h1>Zadania - moduł 5</h1>
-        <NavMenu>
-          <NavMenuLink
-            pathTo={'/task-1'}
-            navLinkLabel={'Task 1'}
-          />
-          <NavMenuLink
-            pathTo={'/task-2'}
-            navLinkLabel={'Task 2'}
-          />
-          <NavMenuLink
-            pathTo={'/task-3'}
-            navLinkLabel={'Task 3'}
-          />
-          <NavMenuLink
-            pathTo={'/task-4'}
-            navLinkLabel={'Task 4'}
-          />
-          <NavMenuLink
-            pathTo={'/task-5'}
-            navLinkLabel={'Task 5'}
-          />
-        </NavMenu>
-      </div>
+      <NavBarContainer>
+        <NavMenu />
+      </NavBarContainer>
+      <h1
+        style={{ marginTop: '10px' }}
+      >Zadania - moduł 5
+      </h1>
       <Routes>
         <Route
           path={'/'}
           element={
-            <h3>
-              ⬆️ Wybierz zadanie ⬆️
-            </h3>
+            <>
+              <h3>
+                Wybierz zadanie korzystając z paska nawigacji
+              </h3>
+            </>
           }
         />
         <Route
@@ -60,12 +48,12 @@ const App = () => {
             />
           }
         />
-        {/* <Route
-            path={'/task-3'}
-            element={
-              <... />
+        <Route
+          path={'/task-3'}
+          element={
+            <PageWithNavMenu />
           }
-          /> */}
+        />
         {/* <Route
             path={'/task-4'}
             element={

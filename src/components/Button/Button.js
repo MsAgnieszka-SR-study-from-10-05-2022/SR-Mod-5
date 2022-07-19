@@ -23,7 +23,7 @@ export const Button = (props) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.node
 }
 
 export default Button
