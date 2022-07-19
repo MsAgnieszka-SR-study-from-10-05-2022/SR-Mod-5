@@ -35,6 +35,8 @@ export const PageWithSnackbar = (props) => {
     if (isSnackbarOpen) {
       handleCloseSnackbarAfterTimeout()
     }
+
+    return () => clearTimeout(handleCloseSnackbarAfterTimeout)
   }, [handleCloseSnackbarAfterTimeout, isSnackbarOpen])
 
   return (
@@ -54,7 +56,7 @@ export const PageWithSnackbar = (props) => {
           isSnackbarOpen={isSnackbarOpen}
           // If you want to change Snackbar position pick one of proposal and add it as a className props
           // You can choose: 'top-left' or 'bottom-center' or 'center-of-site'
-          className={''}
+          className={'bottom-center'}
         >
           {children}
         </Snackbar>
