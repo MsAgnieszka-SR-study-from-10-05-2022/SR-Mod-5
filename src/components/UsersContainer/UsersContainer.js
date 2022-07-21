@@ -24,7 +24,7 @@ const InfoMessage = styled.p`
 `
 
 export const UsersContainer = (props) => {
-  const [data, setData] = React.useState(null)
+  const [data, setData] = React.useState([])
   const [isLoading, setIsLoading] = React.useState(false)
   const [hasError, setHasError] = React.useState(false)
   const [valueFromInput, setValueFromInput] = React.useState('')
@@ -45,7 +45,7 @@ export const UsersContainer = (props) => {
   }, [])
 
   const handleKeyDown = (e) => {
-    if (data !== null && e.key === 'Enter') {
+    if (data !== [] && e.key === 'Enter') {
       setValueFromInput(e.target.value)
     }
   }
@@ -59,7 +59,7 @@ export const UsersContainer = (props) => {
 
   const handleReset = () => {
     setValueFromInput(() => '')
-    inputRef.current.value = null
+    inputRef.current.value = ''
     inputRef.current.focus()
   }
 
