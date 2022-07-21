@@ -3,10 +3,10 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import NavMenu from 'components/NavMenu'
-// import ButtonNavMenu from 'components/ButtonNavMenu'
 import PageWithDialog from 'pages/PageWithDialog'
 import PageWithSnackbar from 'pages/PageWithSnackbar'
 import PageWithNavMenu from 'pages/PageWithNavMenu'
+import PageWithUsersSearch from 'pages/PageWithUsersSearch'
 
 import './App.scss'
 import styled from 'styled-components'
@@ -54,12 +54,12 @@ const App = () => {
             <PageWithNavMenu />
           }
         />
-        {/* <Route
-            path={'/task-4'}
-            element={
-              <... />
+        <Route
+          path={'/task-4'}
+          element={
+            <PageWithUsersSearch />
           }
-          /> */}
+        />
         {/* <Route
             path={'/task-5'}
             element={

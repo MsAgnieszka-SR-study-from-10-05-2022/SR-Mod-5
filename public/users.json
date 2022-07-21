@@ -1,0 +1,64 @@
+{
+  "users":[
+    {
+      "firstName": "Santiago",
+      "lastName": "Gil",
+      "email": "santiago.gil@example.com",
+      "uuid": "d1961248-a0f8-4d9c-bceb-6b31500559a3",
+      "gender": "male",
+      "age": "62",
+      "username": "heavywolf406",
+      "picture": "https://randomuser.me/api/portraits/thumb/men/66.jpg"
+    },
+    {
+      "firstName": "Friedlinde",
+      "lastName": "Plate",
+      "email": "friedlinde.plate@example.com",
+      "uuid": "dbfad037-d53d-45a0-a756-de569ade8d07",
+      "gender": "female",
+      "age": "56",
+      "username": "heavybird295",
+      "picture": "https://randomuser.me/api/portraits/thumb/women/37.jpg"
+    },
+    {
+      "firstName": "Antoni",
+      "lastName": "Bonanza",
+      "email": "antoni.bonanza@example.com",
+      "uuid": 	"1f4942b0-0047-4f54-8a6e-cf728hj26119",
+      "gender": "male",
+      "age": "31",
+      "username": "greenbutterfly8671",
+      "picture": 	"https://randomuser.me/api/portraits/thumb/men/10.jpg"
+    },
+    {
+      "firstName": "Nurdan",
+      "lastName": "Baturalp",
+      "email": "nurdan.baturalp@example.com",
+      "uuid": "d1961248-a0f8-4e9c-bceb-6b32400559a3",
+      "gender": "female",
+      "age": "39",
+      "username": "redbird886",
+      "picture": 	"https://randomuser.me/api/portraits/thumb/women/3.jpg"
+    },
+    {
+      "firstName": "Monika",
+      "lastName": "Kowalska",
+      "email": "monika.kowalska@example.com",
+      "uuid": 	"14e342b0-00a7-4a54-8a6e-cf658bd22419",
+      "gender": "female",
+      "age": "48",
+      "username": "redbutternotfly671",
+      "picture": 	"https://randomuser.me/api/portraits/thumb/women/57.jpg"
+    },
+    {
+      "firstName": "Alexej",
+      "lastName": "Kohl",
+      "email": "alexej.kohl@example.com",
+      "uuid": 	"15e942b0-00a7-4f54-8a6e-cf728bd26119",
+      "gender": "male",
+      "age": "26",
+      "username": "yellowbutterfly861",
+      "picture": 	"https://randomuser.me/api/portraits/thumb/men/14.jpg"
+    }
+  ]
+}
