@@ -7,6 +7,7 @@ import PageWithDialog from 'pages/PageWithDialog'
 import PageWithSnackbar from 'pages/PageWithSnackbar'
 import PageWithNavMenu from 'pages/PageWithNavMenu'
 import PageWithUsersSearch from 'pages/PageWithUsersSearch'
+import PageWithUserDetails from 'pages/PageWithUserDetails'
 
 import './App.scss'
 import styled from 'styled-components'
@@ -14,6 +15,11 @@ import styled from 'styled-components'
 const NavBarContainer = styled.div``
 
 const App = () => {
+  const [chosenUser, setChosenUser] = React.useState({})
+
+  const selectedUserOnClick = (user) => setChosenUser(user)
+  // console.log(chosenUser)
+
   return (
     <>
       <NavBarContainer>
@@ -21,7 +27,8 @@ const App = () => {
       </NavBarContainer>
       <h1
         style={{ marginTop: '10px' }}
-      >Zadania - moduł 5
+      >
+        Zadania - moduł 5
       </h1>
       <Routes>
         <Route
@@ -55,17 +62,22 @@ const App = () => {
           }
         />
         <Route
-          path={'/task-4'}
+          path={'/users'}
           element={
-            <PageWithUsersSearch />
+            <PageWithUsersSearch
+              selectedUserOnClick={selectedUserOnClick}
+            />
           }
         />
-        {/* <Route
-            path={'/task-5'}
-            element={
-              <... />
+        <Route
+          path={'/user-details'}
+          element={
+            <PageWithUserDetails
+              user={chosenUser}
+              // handleBackToSearch={handleBackToSearch}
+            />
           }
-          /> */}
+        />
       </Routes>
 
     </>

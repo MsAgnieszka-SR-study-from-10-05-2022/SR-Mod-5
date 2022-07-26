@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Button from 'components/Button'
 import { UsersList } from 'components/UsersContainer'
@@ -23,7 +24,7 @@ const InfoMessage = styled.p`
   font-weight: bold;
 `
 
-export const UsersContainer = (props) => {
+export const UsersContainer = ({ selectedUserOnClick }) => {
   const [data, setData] = React.useState([])
   const [isLoading, setIsLoading] = React.useState(false)
   const [hasError, setHasError] = React.useState(false)
@@ -40,8 +41,15 @@ export const UsersContainer = (props) => {
       .finally(() => setIsLoading(() => false))
   }
 
+  const handleInputFocus = () => {
+    setTimeout(() => {
+      inputRef.current.focus()
+    }, 1000)
+  }
+
   React.useEffect(() => {
     handleFetchDataFunction()
+    handleInputFocus()
   }, [])
 
   const handleKeyDown = (e) => {
@@ -91,12 +99,19 @@ export const UsersContainer = (props) => {
                     Nie znaleziono szukanego użytkownika
                   </InfoMessage>
                   :
-                  <UsersList data={filteredUsers} />
+                  <UsersList
+                    data={filteredUsers}
+                    selectedUserOnClick={selectedUserOnClick}
+                  />
               }
             </>
       }
     </UsersContainerWrapper>
   )
+}
+
+UsersContainer.propTypes = {
+  selectedUserOnClick: PropTypes.func.isRequired
 }
 
 export default UsersContainer

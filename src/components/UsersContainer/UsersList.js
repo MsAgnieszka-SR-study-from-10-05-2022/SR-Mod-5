@@ -7,6 +7,7 @@ import 'components/UsersContainer/styles.scss'
 export const UsersList = (props) => {
   const {
     data,
+    selectedUserOnClick,
     ...otherProps
   } = props
 
@@ -26,6 +27,9 @@ export const UsersList = (props) => {
             firstName={firstName}
             lastName={lastName}
             age={ageAsNumber}
+            user={user}
+            selectedUserOnClick={selectedUserOnClick}
+            pathTo={'/user-details'}
           />
         )
       })}
@@ -34,7 +38,8 @@ export const UsersList = (props) => {
 }
 
 UsersList.propTypes = {
-  data: PropTypes.array.isRequired
+  data: PropTypes.array.isRequired,
+  selectedUserOnClick: PropTypes.func.isRequired
 }
 
 export default UsersList
