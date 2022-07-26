@@ -29,7 +29,7 @@ export const NavMenuLink = (props) => {
 NavMenuLink.propTypes = {
   className: PropTypes.string,
   pathTo: PropTypes.string.isRequired,
-  navLinkLabel: PropTypes.string.isRequired
+  navLinkLabel: PropTypes.node.isRequired
 }
 
 export default NavMenuLink
