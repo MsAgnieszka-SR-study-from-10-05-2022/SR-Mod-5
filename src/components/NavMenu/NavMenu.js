@@ -32,34 +32,52 @@ export const NavMenu = (props) => {
           <NavMenuLink
             pathTo={'/task-1'}
             navLinkLabel={'Task 1'}
+            className={'menu-link-item'}
           />
           <NavMenuLink
             pathTo={'/task-2'}
             navLinkLabel={'Task 2'}
+            className={'menu-link-item'}
           />
           <NavMenuLink
             pathTo={'/task-3'}
             navLinkLabel={'Task 3'}
+            className={'menu-link-item'}
           />
           <NavMenuLink
-            pathTo={'/task-4'}
-            navLinkLabel={'Task 4'}
+            pathTo={'/users'}
+            navLinkLabel={'Task 4 + 5'}
+            className={'menu-link-item'}
           />
-          <NavMenuLink
-            pathTo={'/task-5'}
+          {/* <NavMenuLink
+            pathTo={'/users'}
             navLinkLabel={'Task 5'}
-          />
+          /> */}
         </ul>
         <Button
           label={<ExitIcon />}
           onClick={handleToggleNavMenu}
-          style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'rgb(19, 21, 26)', fontSize: '22px', border: 'none', backgroundColor: 'transparent' }}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'rgb(19, 21, 26)',
+            fontSize: '22px',
+            border: 'none',
+            backgroundColor: 'transparent'
+          }}
         />
       </nav>
       <Button
         label={<NavBarIcon />}
         onClick={handleToggleNavMenu}
-        style={{ display: 'flex', marginTop: '20px', fontSize: '20px', border: 'none', boxShadow: '0px 0px 4px rgb(19, 21, 26)' }}
+        style={{
+          display: 'flex',
+          marginTop: '20px',
+          fontSize: '20px',
+          border: 'none',
+          boxShadow: '0px 0px 4px rgb(19, 21, 26)'
+        }}
       />
     </>
   )

@@ -17,7 +17,7 @@ export const NavMenuLink = (props) => {
     <li >
       <NavLink
         to={pathTo}
-        className={'menu-link-item'}
+        className={className}
         style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}
         {...otherProps}
       >{navLinkLabel}
